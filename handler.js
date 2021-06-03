@@ -1,8 +1,10 @@
 'use strict';
 const axios = require('axios');
 module.exports.createOrder = async (event) => {
+
    try {
-      var locusData = getCovertJson(event);
+      /* start the covertions*/
+      var locusData =  getCovertJson(event);
       const response = await doRequest(locusData);
       console.info("Create Order  Success");
       return response;
